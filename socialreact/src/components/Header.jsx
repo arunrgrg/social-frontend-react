@@ -1,46 +1,45 @@
 import React from 'react'
+import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 import '../css/header.css'
 
 
 function Header() {
   return (
-    <div className="m-0"> 
-     
-      <header className="">
-  
-  <nav className="navbar navbar-expand-lg navbar-light bg-info ">
-    <div className="container-fluid p-0 m-0">
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i className="fas fa-bars"></i>
-      </button>
-      <div className="collapse navbar-collapse justify-content-center" id="navbarExample01">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item active">
-            <a className="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
-          </li>
-        </ul>
+    <div className="topbarContainer">
+      <div className="topbarLeft">
+        <span className="logo">Lamasocial</span>
+      </div>
+      <div className="topbarCenter">
+        <div className="searchbar">
+          <Search className="searchIcon" />
+          <input
+            placeholder="Search for friend, post or video"
+            className="searchInput"
+          />
+        </div>
+      </div>
+      <div className="topbarRight">
+        <div className="topbarLinks">
+          <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Timeline</span>
+        </div>
+        <div className="topbarIcons">
+          <div className="topbarIconItem">
+            <Person />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarIconItem">
+            <Chat />
+            <span className="topbarIconBadge">2</span>
+          </div>
+          <div className="topbarIconItem">
+            <Notifications />
+            <span className="topbarIconBadge">1</span>
+          </div>
+        </div>
+        <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
       </div>
     </div>
-  </nav>
-</header>
-  </div>
   )
 }
 

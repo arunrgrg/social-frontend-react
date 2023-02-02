@@ -1,17 +1,12 @@
 import React from 'react'
 import Bodyleft from '../components/Bodyleft'
+import Bodyright from '../components/Bodyright'
 
 function Content() {
   return (
     <div>
-        <div class="container gedf-wrapper">
-          <div class="row">
-          <Bodyleft/>
-          <div class="col-md-6 gedf-main">
-            
-          </div>
-          </div>
-        </div>
+      <Bodyleft/>
+      <Bodyright/>
     </div>
   )
 }
